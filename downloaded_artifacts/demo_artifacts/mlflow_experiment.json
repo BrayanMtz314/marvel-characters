@@ -1,0 +1,14 @@
+{
+    "_experiment_id": "367178476192850",
+    "_name": "/Shared/marvel-demo",
+    "_artifact_location": "dbfs:/databricks/mlflow-tracking/367178476192850",
+    "_lifecycle_stage": "active",
+    "_tags": {
+        "mlflow.ownerId": "77767464411161",
+        "mlflow.experiment.sourceName": "/Shared/marvel-demo",
+        "mlflow.ownerEmail": "brayan.mtz1615@gmail.com",
+        "mlflow.experimentType": "MLFLOW_EXPERIMENT"
+    },
+    "_creation_time": 1792478412070,
+    "_last_update_time": 1792478412070
+}
