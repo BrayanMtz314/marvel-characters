@@ -1,9 +1,8 @@
-# MLOps Principles and tools
+# MLOps Principles and Tools
 
-Welcome to the first sections! In this section we'll cover the principles in machine learning engineering. 
+Welcome to the first section! Here, we will cover the core principles of machine learning engineering. 
 
-- **MLOPS:** is a set of practices that combines machine learning, software engineering (DevOps), and data engineering to automate, deploy, and manage machine learning models in production.
-
+- **MLOps:** A set of practices that combines machine learning, software engineering (DevOps), and data engineering to automate, deploy, and manage machine learning models in production.
 
 ### Core Principles
 
@@ -12,32 +11,32 @@ Welcome to the first sections! In this section we'll cover the principles in mac
 - Code Quality
 - Monitoring
 - Documentation
-- A/B testing and experimentation
-- Feature stores
+- A/B Testing and Experimentation
+- Feature Stores
 - Explainability
 
 ### MLOps Tooling
 
-The tools could be categorized based on their functionality.
+These tools can be categorized based on their functionality:
 
-- Version Control: Git, Gitlab, Bitbucket, AWSCodeCommit
-- CI/CD: Jenkings, Acure Devops, Github actions, etc.
-- Orchestration: Airflow, Argo workflows, databricks workflow.
-- Model Registry: MLflow, Amazon SageMaker.
-- Compute: Databricks compute, Kubernetes, Azure, ML SageMaker
-- Serving: Databricks, Kubernetes, Azure, ML SageMaker
-- Monioring: There are many tools here, but they are generally customized based on the project model.
-- Contianer Registry: Dockerhub
-- Feature Store: Databrick, hopsworks, FEAST
+- **Version Control:** Git, GitLab, Bitbucket, AWS CodeCommit
+- **CI/CD:** Jenkins, Azure DevOps, GitHub Actions, etc.
+- **Orchestration:** Airflow, Argo Workflows, Databricks Workflows
+- **Model Registry:** MLflow, Amazon SageMaker
+- **Compute:** Databricks Compute, Kubernetes, Azure, Amazon SageMaker
+- **Serving:** Databricks, Kubernetes, Azure, Amazon SageMaker
+- **Monitoring:** There are many tools available, but they are generally chosen based on the project's specific needs.
+- **Container Registry:** Docker Hub
+- **Feature Store:** Databricks, Hopsworks, Feast
 
-### DEVOPS != MLOPS
+### DevOps != MLOps
 
 DevOps automates and streamlines traditional software development, while MLOps extends these principles to manage the unique lifecycle of machine learning (ML) models.
 
-In an ideal scenario, developers should be able to deploy their software, and machine learning engineers should be able to deploy machine learning models. However, this rarely happens. It is why the MLOps team exists.
+In an ideal scenario, software developers should be able to deploy their own software, and machine learning engineers should be able to deploy their own machine learning models. However, this rarely happens seamlessly. This gap is exactly why the MLOps team exists.
 
-### MLOPS with databricks
+### MLOps with Databricks
 
-fortunately, databricks provide the complete tools necessary for mlops.
+Fortunately, Databricks provides a complete suite of tools necessary for MLOps.
 
 ![Databricks Tools](../images/databricksTools.png)
