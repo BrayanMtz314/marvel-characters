@@ -34,7 +34,6 @@ spark = SparkSession.builder.getOrCreate()
 w = WorkspaceClient()
 
 os.environ["DBR_HOST"] = w.config.host
-os.environ["DBR_TOKEN"] = w.tokens.create(lifetime_seconds=1200).token_value
 
 if not is_databricks():
     load_dotenv()
@@ -162,10 +161,12 @@ print(dataframe_records[0])
 def call_endpoint(record):
     """Calls the model serving endpoint with a given input record."""
     serving_endpoint = f"{os.environ['DBR_HOST']}/serving-endpoints/marvel-characters-ab-testing/invocations"
+    
+    auth_headers = w.config.authenticate()
 
     response = requests.post(
         serving_endpoint,
-        headers={"Authorization": f"Bearer {os.environ['DBR_TOKEN']}"},
+        headers=auth_headers,
         json={"dataframe_records": record},
     )
     return response.status_code, response.text
