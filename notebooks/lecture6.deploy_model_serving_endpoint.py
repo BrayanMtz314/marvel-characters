@@ -25,14 +25,14 @@ spark = SparkSession.builder.getOrCreate()
 
 w = WorkspaceClient()
 
-os.environ["DBR_HOST"] = w.config.host
-os.environ["DBR_TOKEN"] = w.tokens.create(lifetime_seconds=1200).token_value
-
 if not is_databricks():
     load_dotenv()
     profile = os.environ["PROFILE"]
     mlflow.set_tracking_uri(f"databricks://{profile}")
     mlflow.set_registry_uri(f"databricks-uc://{profile}")
+
+# Safely extract the host and token directly from the authenticated WorkspaceClient config
+os.environ["DBR_HOST"] = w.config.host
 
 # Load project config
 config = ProjectConfig.from_yaml(config_path="../project_config_marvel.yml", env="dev")
@@ -101,9 +101,11 @@ def call_endpoint(record):
     serving_endpoint = f"{os.environ['DBR_HOST']}/serving-endpoints/marvel-character-model-serving/invocations"    
     print(f"Calling endpoint: {serving_endpoint}")
     
+    auth_headers = w.config.authenticate()
+    
     response = requests.post(
         serving_endpoint,
-        headers={"Authorization": f"Bearer {os.environ['DBR_TOKEN']}"},
+        headers=auth_headers,
         json={"dataframe_records": record},
     )
     return response.status_code, response.text
