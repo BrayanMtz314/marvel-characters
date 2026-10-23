@@ -66,5 +66,3 @@ databricks bundle run
 databricks bundle destroy
 ```
 
-
-Continue in lecture 8...
