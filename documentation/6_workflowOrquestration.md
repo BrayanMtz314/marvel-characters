@@ -1,4 +1,4 @@
-# Section 7 - Workflow Orquestration
+# Section 6 part 2 - Workflow Orquestration
 
 ### A/B Test vs Traffic Split
 

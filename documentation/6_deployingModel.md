@@ -1,4 +1,4 @@
-# Section 6: Deploying Model Serving Endpoint
+# Section 6 part 1: Deploying Model Serving Endpoint
 
 ### Databricks Serverless Endpoints for ML Models
 
