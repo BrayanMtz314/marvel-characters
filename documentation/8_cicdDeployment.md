@@ -35,4 +35,4 @@ This lecture we'll cover
 - ISOLATED: Access restricted to specific workspaces
 - Use workspace binding to separate ML projecs (e.g Hotel Pricing vs Demand Forecasting)
 
-Continue 2:10
+Continue 2:15
